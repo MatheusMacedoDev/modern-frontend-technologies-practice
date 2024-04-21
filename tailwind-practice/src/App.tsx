@@ -1,11 +1,8 @@
-import './App.css'
+import './App.css';
+import NewsletterCard from './components/NewsletterCard';
 
-function App() {
+export default function App() {
     return (
-        <h1 className="text-3xl font-bold underline">
-            Hello world!
-        </h1>
+        <NewsletterCard />
     )
 }
-
-export default App
