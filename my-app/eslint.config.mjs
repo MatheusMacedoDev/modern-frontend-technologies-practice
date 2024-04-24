@@ -1,11 +1,16 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import tseslint from "typescript-eslint";
+import globals from 'globals';
+import pluginJs from '@eslint/js';
+import tseslint from 'typescript-eslint';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 
 export default [
     {
+        settings: {
+            react: {
+                version: 'detect'
+            }
+        },
         plugins: {
             react,
             reactHooks
@@ -22,7 +27,7 @@ export default [
             }
         },
         rules: {
-            'react/jsx-uses-react': 'error',
+            'react/jsx-uses-react': 'off',
             'react/jsx-uses-vars': 'error',
             'reactHooks/rules-of-hooks': 'error',
             'reactHooks/exhaustive-deps': 'warn',
