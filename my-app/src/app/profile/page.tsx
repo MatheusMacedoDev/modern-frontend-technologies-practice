@@ -1,5 +1,10 @@
 import Link from 'next/link';
 
+export const metadata = {
+    title: 'Profile',
+    description: 'Profile description'
+};
+
 export default function ProfilePage() {
     return (
         <div>
