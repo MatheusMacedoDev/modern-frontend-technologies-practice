@@ -7,7 +7,7 @@ export default function PayrollPage() {
         const number: number = Math.round(Math.random() * 100 - 1 + 1);
 
         if (number <= 50) {
-            throw new Error();
+            throw new Error('Random error.');
         }
     }, []);
 
