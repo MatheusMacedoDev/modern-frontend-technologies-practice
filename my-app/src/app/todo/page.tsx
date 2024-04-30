@@ -1,16 +1,16 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 export default function TodoPage() {
     const [tasks, setTasks] = useState<string[]>([]);
 
     const [newTask, setNewTask] = useState<string>('');
 
-    function addTask() {
+    const addTask = useCallback(() => {
         setTasks(() => [...tasks, newTask]);
         setNewTask('');
-    }
+    }, [tasks, newTask]);
 
     return (
         <div>
